@@ -25,6 +25,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: TDD STEP 001
-        run: npm install
-        run: npm test
+        run: npm install & npm test
         working-directory: ./unit-test
