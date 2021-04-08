@@ -24,5 +24,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        working-directory: ./unit-test
+      - name: TDD STEP 001
         run: npm test
+        working-directory: ./unit-test
