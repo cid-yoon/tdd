@@ -27,3 +27,12 @@ jobs:
       - name: TDD STEP 001
         run: npm install & npm test
         working-directory: ./unit-test
+      - name: TDD STEP
+        run: npm ci
+        working-directory: ./unit-test
+      - name: TDD BUILD
+        run: npm run build --if-present
+        working-directory: ./unit-test
+      - name: TDD TEST
+        run: npm test
+        working-directory: ./unit-test
