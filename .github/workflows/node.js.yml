@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        node-version: [10.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,5 +25,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: TDD STEP 001
+        run: npm install
         run: npm test
         working-directory: ./unit-test
